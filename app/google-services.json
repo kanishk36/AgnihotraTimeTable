@@ -1,0 +1,58 @@
+{
+  "project_info": {
+    "project_number": "600274350210",
+    "firebase_url": "https://sonic-signifier-690.firebaseio.com",
+    "project_id": "sonic-signifier-690"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:600274350210:android:0d35d5cfbbf84386",
+        "android_client_info": {
+          "package_name": "com.madhavashram.agnihotratimetable"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "600274350210-bfj162dru5ghl5qcmv3ase4estj41dpq.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "600274350210-h02b7p0kpntqg8g9g928rbchtnoikre9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.madhavashram.agnihotratimetable",
+            "certificate_hash": "0e1916857c96f905530f8c29274c96b59d4925ad"
+          }
+        },
+        {
+          "client_id": "600274350210-cpia9tfjfcabmn6qinrt370gujv4bjge.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1eNUEsy-MCshPLIUb6OAF5saZf-V_tBI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "600274350210-bfj162dru5ghl5qcmv3ase4estj41dpq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

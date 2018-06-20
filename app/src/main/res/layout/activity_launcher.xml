@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.LauncherActivity"
+    android:background="@color/turquoise_dark">
+
+    <LinearLayout android:id="@+id/layoutInfo"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@color/bright_turquoise"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/lblSahabName"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/lblinfo"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/sp_16"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/lblTouchAnywhere"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/lblclick"
+            android:layout_marginTop="@dimen/dp_5"/>
+    </LinearLayout>
+
+    <ImageView android:id="@+id/splashImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/sahab"
+        android:scaleType="fitXY"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_name"
+        android:layout_margin="@dimen/dp_5"
+        android:layout_above="@id/layoutInfo"/>
+
+</RelativeLayout>

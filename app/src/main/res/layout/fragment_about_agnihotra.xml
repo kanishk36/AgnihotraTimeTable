@@ -1,0 +1,80 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context="com.madhavashram.agnihotratimetable.views.menu.AboutAgnihotraFragment">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingBottom="@dimen/dp_20">
+
+        <ImageView
+            android:id="@+id/imgAbtAgnihotra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/about_agnihotra"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/imgContentDesc"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="@string/lblAboutAgnihotra"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="@string/lblPollutionSubHeading"
+            android:textStyle="bold"
+            android:textColor="@color/white_light"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="@string/lblAboutPollution"
+            android:textColor="@color/white"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:background="@color/bright_citrine"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lblSahab"
+            android:textSize="@dimen/sp_20"
+            android:textColor="@color/white_light"
+            android:textStyle="bold|italic"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/dp_20"/>
+
+        <ImageView
+            android:id="@+id/imgSahab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shri_madhavji_sahab"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/imgContentDesc"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="@string/lblAboutSahab"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</ScrollView>

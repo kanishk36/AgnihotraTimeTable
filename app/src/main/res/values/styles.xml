@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/bright_turquoise</item>
+        <item name="colorPrimaryDark">@color/turquoise_dark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/turquoise</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+
+    <style name="SlideAnimation">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_from_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_to_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_to_right</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_from_left</item>
+    </style>
+
+    <style name="FadeAnimation">
+        <item name="android:activityOpenEnterAnimation">@anim/fadein</item>
+        <item name="android:activityOpenExitAnimation">@anim/fadeout</item>
+        <item name="android:activityCloseEnterAnimation">@anim/fadein</item>
+        <item name="android:activityCloseExitAnimation">@anim/fadeout</item>
+    </style>
+
+</resources>

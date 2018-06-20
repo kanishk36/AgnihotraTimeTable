@@ -1,0 +1,41 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context="com.madhavashram.agnihotratimetable.views.menu.AboutMadhavashramFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dp_20"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/imgAbtAshram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/m1"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/imgContentDesc"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="@string/lblAboutMadhavashram"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="@string/lblShreeSays"
+            android:textStyle="bold"
+            android:textColor="@color/white_light"/>
+
+    </LinearLayout>
+
+</ScrollView>

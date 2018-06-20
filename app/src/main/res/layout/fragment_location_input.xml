@@ -1,0 +1,158 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    tools:context="com.madhavashram.agnihotratimetable.views.fragments.LocationInputFragment">
+
+    <RadioGroup
+        android:id="@+id/searchByGrp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:translationZ="@dimen/dp_2"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/radiogroup_round_background"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20">
+
+        <RadioButton
+            android:id="@+id/srchByPlace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_1"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/dp_5"
+            android:background="@drawable/radio_button_round_selector"
+            android:textColor="@drawable/radio_button_round_text_selector"
+            android:button="@null"
+            android:checked="true"
+            android:text="@string/txtSearchByPlace"/>
+
+        <RadioButton
+            android:id="@+id/srchByLoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_1"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/dp_5"
+            android:background="@drawable/radio_button_round_selector"
+            android:textColor="@drawable/radio_button_round_text_selector"
+            android:button="@null"
+            android:checked="false"
+            android:text="@string/txtSearchByLocation"/>
+
+    </RadioGroup>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="@dimen/dp_20">
+
+        <AutoCompleteTextView
+            android:id="@+id/txtPlace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:hint="@string/enterplace"
+            android:inputType="text"
+            android:textColorHint="@color/hint_text_color"
+            android:textColor="@color/black"
+            android:imeOptions="actionDone"
+            android:background="@drawable/editext_with_border"/>
+
+        <LinearLayout
+            android:id="@+id/latLngContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/transparent"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/txtLatitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="numberDecimal"
+                android:hint="@string/txtLatitude"
+                android:textColorHint="@color/hint_text_color"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/editext_with_border"/>
+
+            <EditText
+                android:id="@+id/txtLongitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:hint="@string/txtLongitude"
+                android:textColorHint="@color/hint_text_color"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/dp_10"
+                android:inputType="numberDecimal"
+                android:imeOptions="actionDone"
+                android:background="@drawable/editext_with_border"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <RadioGroup
+        android:id="@+id/dateRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp_20"
+        android:gravity="center_horizontal">
+
+        <RadioButton
+            android:id="@+id/btnSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnSelect"
+            android:textColor="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/btnCurrentYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnCurrentYear"
+            android:checked="true"
+            android:textColor="@color/white"/>
+    </RadioGroup>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button android:id="@+id/btnGetTime"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/btnGetTime"
+            android:background="@drawable/button_background_with_shadow"
+            android:textColor="@color/turquoise"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_50"/>
+
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lblcopyright"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+

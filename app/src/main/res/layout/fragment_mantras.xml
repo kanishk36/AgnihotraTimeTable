@@ -1,0 +1,172 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context="com.madhavashram.agnihotratimetable.views.menu.MantrasFragment">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dp_20">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lblSunsetMantraHeading"
+            android:textSize="@dimen/sp_24"
+            android:textColor="@color/white_light"
+            android:textStyle="italic"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/txtSunsetEnglish1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lblSunsetMantraEnglish1"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            android:gravity="start"
+            android:layout_marginTop="@dimen/dp_20"/>
+
+        <TextView
+            android:id="@+id/txtSunsetEnglish2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lblSunsetMantraEnglish2"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            android:gravity="start"
+            android:layout_marginTop="@dimen/dp_20"/>
+
+        <TextView
+            android:id="@+id/txtSunsetEnglish3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lblMantraEnglish3"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            android:gravity="start"
+            android:layout_marginTop="@dimen/dp_20"/>
+
+        <TextView
+            android:id="@+id/txtSunsetEnglish4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lblMantraEnglish4"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            android:gravity="start"
+            android:layout_marginTop="@dimen/dp_20"/>
+
+        <TextView
+            android:id="@+id/txtSunsetHindi1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lblSunsetMantraHindi1"
+            android:textSize="@dimen/sp_24"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic"
+            android:gravity="start"
+            android:layout_marginTop="@dimen/dp_20"/>
+
+        <TextView
+            android:id="@+id/txtSunsetHindi2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lblMantraHindi2"
+            android:textSize="@dimen/sp_24"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic"
+            android:gravity="start"
+            android:layout_marginTop="@dimen/dp_20"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:background="@color/bright_citrine"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lblSunriseMantraHeading"
+            android:textSize="@dimen/sp_24"
+            android:textColor="@color/white_light"
+            android:textStyle="bold|italic"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/txtSunriseEnglish1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lblSunriseMantraEnglish1"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            android:gravity="start"
+            android:layout_marginTop="@dimen/dp_20"/>
+
+        <TextView
+            android:id="@+id/txtSunriseEnglish2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lblSunriseMantraEnglish2"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            android:gravity="start"
+            android:layout_marginTop="@dimen/dp_20"/>
+
+        <TextView
+            android:id="@+id/txtSunriseEnglish3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lblMantraEnglish3"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            android:gravity="start"
+            android:layout_marginTop="@dimen/dp_20"/>
+
+        <TextView
+            android:id="@+id/txtSunriseEnglish4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lblMantraEnglish4"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            android:gravity="start"
+            android:layout_marginTop="@dimen/dp_20"/>
+
+        <TextView
+            android:id="@+id/txtSunriseHindi1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lblSunriseMantraHindi1"
+            android:textSize="@dimen/sp_24"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic"
+            android:gravity="start"
+            android:layout_marginTop="@dimen/dp_20"/>
+
+        <TextView
+            android:id="@+id/txtSunriseHindi2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lblMantraHindi2"
+            android:textSize="@dimen/sp_24"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic"
+            android:gravity="start"
+            android:layout_marginTop="@dimen/dp_20"/>
+
+    </LinearLayout>
+
+</ScrollView>

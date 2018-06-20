@@ -1,0 +1,328 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context="com.madhavashram.agnihotratimetable.views.menu.AgnihotraProcedureFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="start">
+
+        <!-- Rules -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblRulesHeading"
+            android:textStyle="bold"
+            android:textColor="@color/white_light"
+            android:textSize="@dimen/sp_18"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblRules1"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblRules2"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblRules3"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblRules4"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_10"/>
+
+        <!-- Requisites -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblRequisitesHeading"
+            android:textStyle="bold"
+            android:textColor="@color/white_light"
+            android:layout_marginTop="@dimen/dp_20"
+            android:textSize="@dimen/sp_18"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblRequisites1"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblRequisites2"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblRequisites3"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblRequisites4"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblRequisites5"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_10"/>
+
+        <!-- How to perform -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblHowToPerformHeading"
+            android:textStyle="bold"
+            android:textColor="@color/white_light"
+            android:layout_marginTop="@dimen/dp_20"
+            android:textSize="@dimen/sp_18"/>
+
+        <ImageView
+            android:id="@+id/procedureImage1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/a4"
+            android:layout_marginTop="@dimen/dp_20"
+            android:contentDescription="@string/imgContentDesc"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblPerform1"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_10"/>
+
+        <ImageView
+            android:id="@+id/procedureImage2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/a7"
+            android:layout_marginTop="@dimen/dp_20"
+            android:contentDescription="@string/imgContentDesc"/>
+
+        <ImageView
+            android:id="@+id/procedureImage3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/a9"
+            android:layout_marginTop="@dimen/dp_20"
+            android:contentDescription="@string/imgContentDesc"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblPerform2"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_10"/>
+
+        <ImageView
+            android:id="@+id/procedureImage4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/a10"
+            android:layout_marginTop="@dimen/dp_20"
+            android:contentDescription="@string/imgContentDesc"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblPerform3"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_10"/>
+
+        <ImageView
+            android:id="@+id/procedureImage5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/a11"
+            android:layout_marginTop="@dimen/dp_20"
+            android:contentDescription="@string/imgContentDesc"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblPerform4"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblPerformMantra1"
+            android:textStyle="bold"
+            android:textColor="@color/white_light"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/sp_18"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblPerform5"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblPerformMantra2"
+            android:textStyle="bold"
+            android:textColor="@color/white_light"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/sp_18"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblPerform6"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblPerformMantra3"
+            android:textStyle="bold"
+            android:textColor="@color/white_light"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/sp_18"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblPerform7"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblPerformMantra4"
+            android:textStyle="bold"
+            android:textColor="@color/white_light"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/sp_18"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblPerform8"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblPerform9"
+            android:textStyle="bold"
+            android:textColor="@color/white_light"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblPerformMantra5"
+            android:textStyle="bold"
+            android:textColor="@color/white_light"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/sp_18"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblPerform10"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblPerformMantra6"
+            android:textStyle="bold"
+            android:textColor="@color/white_light"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/sp_18"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblPerform11"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblPerformMantra7"
+            android:textStyle="bold"
+            android:textColor="@color/white_light"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/sp_18"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblPerform12"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblPerformMantra8"
+            android:textStyle="bold"
+            android:textColor="@color/white_light"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/sp_18"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblPerform13"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_10"/>
+
+    </LinearLayout>
+
+</ScrollView>
