@@ -55,19 +55,25 @@ public class CommonUtils {
     public static void showErrorDialog(Context context, String message) {
 
         if(mAlertdialog == null) {
+            try {
 
-            mAlertdialog = new AlertDialog.Builder(context)
-                    .setMessage(message)
-                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            mAlertdialog.dismiss();
-                            mAlertdialog = null;
-                        }
-                    })
-                    .setCancelable(false)
-                    .create();
-            mAlertdialog.show();
+                mAlertdialog = new AlertDialog.Builder(context)
+                        .setMessage(message)
+                        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                mAlertdialog.dismiss();
+                                mAlertdialog = null;
+                            }
+                        })
+                        .setCancelable(false)
+                        .create();
+                mAlertdialog.show();
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
         }
     }
 

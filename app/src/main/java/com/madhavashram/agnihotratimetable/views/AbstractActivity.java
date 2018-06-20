@@ -24,27 +24,45 @@ public class AbstractActivity extends AppCompatActivity {
     }
 
     public void pushFragment(boolean addToHistory, Fragment fragment, boolean isAnimated) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        try {
 
-        if(isAnimated) {
-            transaction.setCustomAnimations(R.anim.slide_from_right, R.anim.slide_to_left,R.anim.slide_to_right ,R.anim.slide_from_left);
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+            if(isAnimated) {
+                transaction.setCustomAnimations(R.anim.slide_from_right, R.anim.slide_to_left,R.anim.slide_to_right ,R.anim.slide_from_left);
+            }
+
+            transaction.replace(R.id.fragment_container, fragment);
+
+            if(addToHistory) {
+                transaction.addToBackStack(fragment.getClass().getName());
+            }
+            transaction.commit();
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
-
-        transaction.replace(R.id.fragment_container, fragment);
-
-        if(addToHistory) {
-            transaction.addToBackStack(fragment.getClass().getName());
-        }
-        transaction.commit();
     }
 
     public void showDialogFragment(Fragment dialogFragment, String tag) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.add(dialogFragment, tag).commit();
+        try {
+
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.add(dialogFragment, tag).commit();
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 
     public void dismissDialogFragment(Fragment dialogFragment) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.remove(dialogFragment).commit();
+        try {
+
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.remove(dialogFragment).commit();
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 }

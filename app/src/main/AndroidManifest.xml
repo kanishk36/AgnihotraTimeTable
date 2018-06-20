@@ -48,6 +48,9 @@
         <activity android:name=".views.MenuActivity"
             android:screenOrientation="portrait"/>
 
+        <activity android:name=".views.AbstractActivity"
+            android:screenOrientation="portrait"/>
+
     </application>
 
 </manifest>

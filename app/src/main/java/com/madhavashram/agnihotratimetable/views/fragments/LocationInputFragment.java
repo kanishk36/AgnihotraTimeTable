@@ -372,7 +372,7 @@ public class LocationInputFragment extends Fragment implements DatePickerDialog.
 
         } finally {
 
-            if(locationName.isEmpty()) {
+            if(TextUtils.isEmpty(locationName)) {
                 locationName = "Unknown";
             }
         }
