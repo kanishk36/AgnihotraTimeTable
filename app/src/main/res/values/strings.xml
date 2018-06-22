@@ -108,7 +108,7 @@ In reply to all these questions came the answer – Agnihotra. He realised that 
     <!-- About Madhavashram -->
     <string name="lblAboutMadhavashram">This is the place from where had started this Era’s first Agnihotra in the world. According to Indian almanac it was ‘Mahashivratri’ day and the date was 22nd February, 1963. On this day, in the evening, under the guidance and direction of Shri Madhavji Potdar Saheb the Agnihotra that was started by the resident of Bairagarh Kalan village Shri Hiralalji Sharma with the utterance of the mantra ‘Agnaye Swaha’, has today spread globally. It has spread everywhere to such a large extent that irrespective of any consideration of nationality, caste, creed, religion, colour, age or sex it has become a part of the life of the people of almost all nations throughout the world. With its beneficial results their lives have become happy, healthy and contented.
 Mahanubhav Shri Madhavji Potdar Saheb apparently came to reside in his place of work ‘Madhavashram’, Bairagarh (Bhopal) in the year 1973. However, his work had already started in Bairagarh ten years ago. After getting started the first Agnihotra ‘Shrisaheb’ began its propagation work in 1968 from Ujjain. On reaching the figure of first 100 practitioners of Agnihotra he named his unregistered institution as ‘Satya Dharma Prachar Prasar’ and the sentence proclaiming its objective was ‘to be spread in each and every house and preached to every householder’. Amongst these first 100 Agnihotris the practitioners were mainly from the four states of Madhya Pradesh, Uttar Pradesh, Rajasthan and Maharashtra. In one year’s time this figure reached to 1000 and by 1973 it had crossed the figure of 4000. Thus, giving it a solid base and shape ‘Saheb’ said adieu to this world on 9th June, 1974. In the centre of Madhavashram is a small but elegant cottage ‘Sudarshan’ where the present Chief of the Ashram, Smt. Nalini Madhavji meets all the visitors everyday. Shree Says –</string>
-    <string name="lblShreeSays">“Here only those will come whose welfare  is going to become a reality".</string>
+    <string name="lblShreeSays">“Here only those will come whose welfare  is going to become a reality."</string>
 
     <!-- Gallery -->
     <string name="txtAgnidhaam">Agnidhaam</string>
@@ -154,7 +154,6 @@ Mahanubhav Shri Madhavji Potdar Saheb apparently came to reside in his place of 
 
     <string name="search_place_internet_error_message">Could not find location. Please check your internet settings.</string>
     <string name="search_place_general_error_message">Could not find location.</string>
-    <string name="error_dialog_Ok_button">OK</string>
     <string name="city_location_error_message">Could not fetch latitude/longitude of selected location</string>
 
     <string name="menu_current_location">Current Location</string>
