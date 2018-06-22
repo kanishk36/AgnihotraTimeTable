@@ -62,7 +62,7 @@ public class CommonUtils {
                         .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                mAlertdialog.dismiss();
+                                dialog.dismiss();
                                 mAlertdialog = null;
                             }
                         })
