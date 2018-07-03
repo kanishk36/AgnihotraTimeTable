@@ -76,12 +76,17 @@ public class LocationInputFragment extends Fragment implements DatePickerDialog.
     }
 
     @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        mActivity = (AbstractActivity) getActivity();
+    }
+
+    @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         mLatitude = -1.0;
         mLongitude = -1.0;
-        mActivity = (AbstractActivity) getActivity();
         mCalendar = Calendar.getInstance();
         mNetworkManager = new NetworkManager();
         autoCompleteTextAdapter = new AutoCompleteTextAdapter(mActivity, R.layout.autocomplete_text_layout);

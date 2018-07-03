@@ -1,14 +1,10 @@
 <resources>
-    <string name="app_name">AgnihotraTimeTable</string>
+    <string name="app_name" translatable="false">AgnihotraTimeTable</string>
 
     <string name="drawer_open" translatable="false">Open</string>
     <string name="drawer_close" translatable="false">Close</string>
     <string name="imgContentDesc" translatable="false">Image Description</string>
-
-    <string-array name="suported_languages">
-        <item>en</item>
-        <item>hi</item>
-    </string-array>
+    <string name="default_language" translatable="false">en</string>
 
     <string name="toolbar_title">Agnihotra</string>
     <string name="lblinfo">Shri Madhavji Potdar Saheb \n 1915&#8211;1974 \n Agnihotra widhi ke punarujeevankarta</string>
@@ -31,7 +27,7 @@
     <string name="btnSelect">Select Date</string>
     <string name="btnGetTime"> Get Time</string>
     <string name="btnCurrentYear"> Current year</string>
-    <string name="lblcopyright">Copyright © Madhavashram, Bhopal</string>
+    <string name="lblcopyright" translatable="false">Copyright © Madhavashram, Bhopal</string>
 
     <string name="january">January</string>
     <string name="february">February</string>
@@ -95,15 +91,15 @@ In reply to all these questions came the answer – Agnihotra. He realised that 
     <!-- Mantras -->
     <string name="lblSunriseMantraHeading">Sunrise Mantra</string>
     <string name="lblSunsetMantraHeading">Sunset Mantra</string>
-    <string name="lblSunsetMantraEnglish1">Agnaye Swaha</string>
-    <string name="lblSunsetMantraEnglish2">Agnaye Idam Na Mama</string>
-    <string name="lblSunriseMantraEnglish1">Suryaya Swaha</string>
-    <string name="lblSunriseMantraEnglish2">Suryaya Idam Na Mama</string>
-    <string name="lblMantraEnglish3">Prajapataye Swaha</string>
-    <string name="lblMantraEnglish4">Prajapataye Idam Na Mama</string>
-    <string name="lblSunsetMantraHindi1">vXu;s Lokgk vXu;s bna u eeA</string>
-    <string name="lblSunriseMantraHindi1">lw;kZ; Lokgk lw;kZ; bna u eeA</string>
-    <string name="lblMantraHindi2">iztkir;s Lokgk iztkir;s bna u eeAA</string>
+    <string name="lblSunsetMantraEnglish1" translatable="false">Agnaye Swaha</string>
+    <string name="lblSunsetMantraEnglish2" translatable="false">Agnaye Idam Na Mama</string>
+    <string name="lblSunriseMantraEnglish1" translatable="false">Suryaya Swaha</string>
+    <string name="lblSunriseMantraEnglish2" translatable="false">Suryaya Idam Na Mama</string>
+    <string name="lblMantraEnglish3" translatable="false">Prajapataye Swaha</string>
+    <string name="lblMantraEnglish4" translatable="false">Prajapataye Idam Na Mama</string>
+    <string name="lblSunsetMantraHindi1" translatable="false">vXu;s Lokgk vXu;s bna u eeA</string>
+    <string name="lblSunriseMantraHindi1" translatable="false">lw;kZ; Lokgk lw;kZ; bna u eeA</string>
+    <string name="lblMantraHindi2" translatable="false">iztkir;s Lokgk iztkir;s bna u eeAA</string>
 
     <!-- About Madhavashram -->
     <string name="lblAboutMadhavashram">This is the place from where had started this Era’s first Agnihotra in the world. According to Indian almanac it was ‘Mahashivratri’ day and the date was 22nd February, 1963. On this day, in the evening, under the guidance and direction of Shri Madhavji Potdar Saheb the Agnihotra that was started by the resident of Bairagarh Kalan village Shri Hiralalji Sharma with the utterance of the mantra ‘Agnaye Swaha’, has today spread globally. It has spread everywhere to such a large extent that irrespective of any consideration of nationality, caste, creed, religion, colour, age or sex it has become a part of the life of the people of almost all nations throughout the world. With its beneficial results their lives have become happy, healthy and contented.
@@ -128,29 +124,29 @@ Mahanubhav Shri Madhavji Potdar Saheb apparently came to reside in his place of 
     <string name="lblAddress4">Bairagarh, Bhopal (M.P.)</string>
 
     <string name="lblWebsite">Websites :</string>
-    <string name="lblSite1">www.agnihotraindia.in</string>
-    <string name="lblSite2">www.madhavashramindia.in</string>
+    <string name="lblSite1" translatable="false">www.agnihotraindia.in</string>
+    <string name="lblSite2" translatable="false">www.madhavashramindia.in</string>
 
     <string name="lblContactPersonHeading">Contact Persons :</string>
 
     <string name="lblContactPerson1">Vijayaji Potdar</string>
-    <string name="lblPhone1">+91&#8211;9827052445</string>
+    <string name="lblPhone1" translatable="false">+91&#8211;9827052445</string>
 
     <string name="lblContactPerson2">Dr. Vivek Potdar</string>
-    <string name="lblPhone2">+91&#8211;8120036303</string>
-    <string name="lblEmail2">madhavashram@agnihotraindia.in</string>
+    <string name="lblPhone2" translatable="false">+91&#8211;8120036303</string>
+    <string name="lblEmail2" translatable="false">madhavashram@agnihotraindia.in</string>
 
     <string name="lblContactPerson3">Mr. Prasad Kushwaha</string>
-    <string name="lblPhone3">+91&#8211;9826079446</string>
-    <string name="lblEmail3">prasad@agnihotraindia.in</string>
+    <string name="lblPhone3" translatable="false">+91&#8211;9826079446</string>
+    <string name="lblEmail3" translatable="false">prasad@agnihotraindia.in</string>
 
     <string name="lblContactPerson4">Mr. Swapnil Tolambiya</string>
-    <string name="lblPhone4">+91&#8211;9881724541</string>
-    <string name="lblEmail4">swapniltolambiya@gmail.com</string>
+    <string name="lblPhone4" translatable="false">+91&#8211;9881724541</string>
+    <string name="lblEmail4" translatable="false">swapniltolambiya@gmail.com</string>
 
     <string name="lblContactPerson5">Mr. Kanishk Bansode</string>
-    <string name="lblPhone5">+91&#8211;9890553680</string>
-    <string name="lblEmail5">kanishk.bansode@yahoo.com</string>
+    <string name="lblPhone5" translatable="false">+91&#8211;9890553680</string>
+    <string name="lblEmail5" translatable="false">kanishk.bansode@yahoo.com</string>
 
     <string name="search_place_internet_error_message">Could not find location. Please check your internet settings.</string>
     <string name="search_place_general_error_message">Could not find location.</string>
@@ -158,6 +154,9 @@ Mahanubhav Shri Madhavji Potdar Saheb apparently came to reside in his place of 
 
     <string name="menu_current_location">Current Location</string>
     <string name="menu_savepdf">Save PDF</string>
+
+    <string name="langEnglish" translatable="false">English</string>
+    <string name="langHindi" translatable="false">हिंदी</string>
 
     <!-- Common -->
     <string name="lblAM">A.M.</string>
@@ -170,6 +169,8 @@ Mahanubhav Shri Madhavji Potdar Saheb apparently came to reside in his place of 
     <string name="ad_mob_app_id" translatable="false">ca-app-pub-1559061333211273~6471866247</string>
     <string name="ad_mob_add_unit_id" translatable="false">ca-app-pub-1559061333211273/8662915312</string>
     <string name="blank_string" translatable="false">-</string>
+    <string name="english_code" translatable="false">en</string>
+    <string name="hindi_code" translatable="false">hi</string>
 
     <string-array name="menu_array">
         <item>@string/lstAbout_agnihotra</item>
@@ -177,6 +178,7 @@ Mahanubhav Shri Madhavji Potdar Saheb apparently came to reside in his place of 
         <item>@string/lstMantras</item>
         <item>@string/lstAbout_madhavashram</item>
         <item>@string/lstGallery</item>
+        <item>@string/lstLanguage</item>
         <item>@string/lstContact_us</item>
     </string-array>
 
@@ -206,5 +208,11 @@ Mahanubhav Shri Madhavji Potdar Saheb apparently came to reside in his place of 
         <item>@string/txtKundYagyashaala</item>
         <item>@string/txtSudarshan</item>
     </string-array>
+
+    <string-array name="suported_languages">
+        <item>@string/english_code</item>
+        <item>@string/hindi_code</item>
+    </string-array>
+    <string name="lstLanguage">Language</string>
 
 </resources>

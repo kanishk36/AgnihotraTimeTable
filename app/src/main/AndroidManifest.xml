@@ -13,7 +13,9 @@
         android.support.compat,
         android.support.design,
         android.support.v7.recyclerview,
-        android.support.v7.cardview"/>
+        android.support.v7.cardview"
+        android:minSdkVersion="9"
+        android:maxSdkVersion="19"/>
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
@@ -26,7 +28,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".views.SplashActivity">
+        <activity android:name=".views.SplashActivity"
+            android:theme="@style/AppTheme.Launcher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -41,7 +44,6 @@
         <activity
             android:name=".views.MainActivity"
             android:screenOrientation="portrait"
-            android:label="@string/toolbar_title"
             android:windowSoftInputMode="adjustPan|stateHidden">
         </activity>
 

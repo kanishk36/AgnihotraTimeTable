@@ -1,10 +1,16 @@
 package com.madhavashram.agnihotratimetable.views;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.NonNull;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -29,6 +35,15 @@ public class MainActivity extends AbstractActivity {
 
     private String menuArray[];
 
+    private BroadcastReceiver languageChangeReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if(intent.getAction() != null && intent.getAction().equals(CommonUtils.LANGUAGE_CHANGE_RECEIVER)) {
+                recreate();
+            }
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +67,14 @@ public class MainActivity extends AbstractActivity {
         adView.loadAd(adRequest);
 
         pushFragment(false, new LocationInputFragment(), false);
+
+        ActionBar actionBar = getSupportActionBar();
+        if(actionBar != null) {
+            actionBar.setTitle(R.string.toolbar_title);
+        }
+
+        LocalBroadcastManager broadcastManager = LocalBroadcastManager.getInstance(this);
+        broadcastManager.registerReceiver(languageChangeReceiver, new IntentFilter(CommonUtils.LANGUAGE_CHANGE_RECEIVER));
     }
 
     @Override
@@ -67,12 +90,22 @@ public class MainActivity extends AbstractActivity {
         }
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        LocalBroadcastManager broadcastManager = LocalBroadcastManager.getInstance(this);
+        broadcastManager.unregisterReceiver(languageChangeReceiver);
+    }
+
     private void setActionBar() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        ActionBar actionBar = getSupportActionBar();
+        if(actionBar != null) {
+            actionBar.setHomeButtonEnabled(true);
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
 
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
         drawerLayout.addDrawerListener(drawerToggle);
@@ -116,15 +149,16 @@ public class MainActivity extends AbstractActivity {
 
     private class DrawerMenuAdapter extends RecyclerView.Adapter<DrawerMenuViewHolder> {
 
+        @NonNull
         @Override
-        public DrawerMenuViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        public DrawerMenuViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-            View view = inflater.inflate(R.layout.drawerlistrow, null);
+            View view = inflater.inflate(R.layout.drawerlistrow, parent, false);
             return new DrawerMenuViewHolder(view);
         }
 
         @Override
-        public void onBindViewHolder(final DrawerMenuViewHolder holder, int position) {
+        public void onBindViewHolder(@NonNull final DrawerMenuViewHolder holder, int position) {
             holder.menuoption.setText(menuArray[position]);
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

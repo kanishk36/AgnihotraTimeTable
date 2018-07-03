@@ -3,6 +3,7 @@ package com.madhavashram.agnihotratimetable.views;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
@@ -13,6 +14,7 @@ import com.madhavashram.agnihotratimetable.views.menu.AboutMadhavashramFragment;
 import com.madhavashram.agnihotratimetable.views.menu.AgnihotraProcedureFragment;
 import com.madhavashram.agnihotratimetable.views.menu.ContactUsFragment;
 import com.madhavashram.agnihotratimetable.views.menu.GalleryFragment;
+import com.madhavashram.agnihotratimetable.views.menu.LanguageSelectionFragment;
 import com.madhavashram.agnihotratimetable.views.menu.MantrasFragment;
 
 /**
@@ -26,7 +28,7 @@ public class MenuActivity extends AbstractActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         int position = getIntent().getIntExtra(CommonUtils.MENU_OPTION_TAG, 0);
@@ -59,15 +61,23 @@ public class MenuActivity extends AbstractActivity {
                 fragment = new GalleryFragment();
                 break;
 
-            case 5: // Contact Us
+            case 5: // Language
+                title = R.string.lstLanguage;
+                fragment = new LanguageSelectionFragment();
+                break;
+
+            case 6: // Contact Us
                 title = R.string.lstContact_us;
                 fragment = new ContactUsFragment();
                 break;
         }
 
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle(title);
+        ActionBar actionBar = getSupportActionBar();
+        if(actionBar != null) {
+            actionBar.setHomeButtonEnabled(true);
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setTitle(title);
+        }
 
         if (fragment != null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.infoViewContainer, fragment).commit();

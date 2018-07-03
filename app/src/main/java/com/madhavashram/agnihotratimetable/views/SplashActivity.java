@@ -1,15 +1,14 @@
 package com.madhavashram.agnihotratimetable.views;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 
-import java.util.Locale;
+import com.madhavashram.agnihotratimetable.R;
+import com.madhavashram.agnihotratimetable.utils.CommonUtils;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -17,17 +16,33 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-//        Resources resources = getResources();
-//        Configuration config = resources.getConfiguration();
-//
-//        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
-//
-//        String defaultLang = getDeviceLanguage(config);
-//        String userPrefLang = settings.getString("user_language", "en");
-//
-//        if(!defaultLang.equals(new Locale(userPrefLang).getLanguage())) {
-//            setAppLocale(config, resources, userPrefLang);
-//        }
+        Resources resources = getResources();
+        Configuration config = resources.getConfiguration();
+
+        String defaultLang = getDeviceLanguage(config);
+        String userPrefLang = CommonUtils.getUserPreferedLanguage(this);
+
+        if(userPrefLang == null) {
+
+            String[] supportedLang = resources.getStringArray(R.array.suported_languages);
+            boolean isLangSupported = false;
+
+            for(String lang : supportedLang)
+            {
+                if(lang.equals(defaultLang)) {
+                    isLangSupported = true;
+                    break;
+                }
+            }
+
+            if(isLangSupported) {
+                userPrefLang = defaultLang;
+            } else {
+                userPrefLang = getString(R.string.default_language);
+            }
+        }
+
+        CommonUtils.setAppLocale(config, this, resources, userPrefLang);
 
         Intent intent = new Intent(SplashActivity.this, LauncherActivity.class);
         startActivity(intent);
@@ -46,20 +61,6 @@ public class SplashActivity extends AppCompatActivity {
         }
 
         return defaultLang;
-    }
-
-    @SuppressWarnings("deprecation")
-    private void setAppLocale(Configuration config, Resources resources, String lang) {
-        Locale locale = new Locale(lang);
-
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-            config.setLocale(locale);
-            createConfigurationContext(config);
-
-        } else {
-            config.locale = locale;
-            resources.updateConfiguration(config, resources.getDisplayMetrics());
-        }
     }
 
 }

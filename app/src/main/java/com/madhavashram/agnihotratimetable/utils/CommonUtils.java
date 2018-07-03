@@ -3,13 +3,21 @@ package com.madhavashram.agnihotratimetable.utils;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.graphics.Point;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.support.v4.content.LocalBroadcastManager;
 import android.util.DisplayMetrics;
 import android.view.WindowManager;
 
 import com.madhavashram.agnihotratimetable.views.AbstractActivity;
 import com.madhavashram.agnihotratimetable.views.fragments.ProgressDialogFragment;
+
+import java.util.Locale;
 
 /**
  * Created by kanishk on 28/10/17.
@@ -28,9 +36,10 @@ public class CommonUtils {
     public static final String PROGRESS_MESSAGE_TAG = "progress_message";
     public static final String TIME_FRAGMENT_TAG = "dialog_fragment";
     public static final String PDF_FILE_TAG = "pdfFileURI";
+    public static final String LANGUAGE_CHANGE_RECEIVER = "language_change_receiver";
+
+    private static final String USER_PREF_LANGUAGE_TAG = "user_language";
     private static final String DIALOG_FRAGMENT_TAG = "dialog_fragment";
-
-
 
     private static AlertDialog mAlertdialog;
     private static ProgressDialogFragment mProgressDialogFragment;
@@ -77,8 +86,8 @@ public class CommonUtils {
         }
     }
 
-    public static void showProgressDialog(AbstractActivity activity, String message)
-    {
+    public static void showProgressDialog(AbstractActivity activity, String message) {
+
         dismissProgressDialog(activity);
 
         Bundle bundle = new Bundle();
@@ -90,11 +99,31 @@ public class CommonUtils {
         activity.showDialogFragment(mProgressDialogFragment, DIALOG_FRAGMENT_TAG);
     }
 
-    public static void dismissProgressDialog(AbstractActivity activity)
-    {
+    public static void dismissProgressDialog(AbstractActivity activity) {
+
         if(mProgressDialogFragment != null) {
             activity.dismissDialogFragment(mProgressDialogFragment);
             mProgressDialogFragment = null;
         }
+    }
+
+    public static String getUserPreferedLanguage(Context context) {
+        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(context);
+        return settings.getString(USER_PREF_LANGUAGE_TAG, null);
+    }
+
+    public static void setAppLocale(Configuration config, Context context, Resources resources, String lang) {
+
+        Locale locale = new Locale(lang);
+        config.setLocale(locale);
+        resources.updateConfiguration(config, resources.getDisplayMetrics());
+
+        SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(context).edit();
+        editor.putString(USER_PREF_LANGUAGE_TAG,lang);
+        editor.apply();
+
+        Intent intent = new Intent(LANGUAGE_CHANGE_RECEIVER);
+        LocalBroadcastManager broadcastManager = LocalBroadcastManager.getInstance(context);
+        broadcastManager.sendBroadcast(intent);
     }
 }

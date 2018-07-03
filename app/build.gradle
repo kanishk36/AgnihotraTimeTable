@@ -5,7 +5,6 @@ android {
 
     defaultConfig {
         applicationId "com.madhavashram.agnihotratimetable"
-        minSdkVersion 9
         targetSdkVersion 27
         versionCode 9
         versionName "3.0"
@@ -24,13 +23,13 @@ android {
 
     productFlavors {
         maxapi19 {
-            minSdkVersion 14
-            targetSdkVersion 23
             versionNameSuffix '-maxapi19'
+            minSdkVersion 9
             dimension "tier"
         }
 
         full {
+            versionNameSuffix '-full'
             minSdkVersion 21
             dimension "tier"
         }

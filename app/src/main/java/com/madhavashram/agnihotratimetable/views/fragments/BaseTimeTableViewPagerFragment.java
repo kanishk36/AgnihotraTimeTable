@@ -1,5 +1,6 @@
 package com.madhavashram.agnihotratimetable.views.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -39,6 +40,12 @@ public abstract class BaseTimeTableViewPagerFragment extends Fragment implements
     }
 
     @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        mFragmentActivity = getActivity();
+    }
+
+    @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
@@ -50,8 +57,6 @@ public abstract class BaseTimeTableViewPagerFragment extends Fragment implements
         timeArray = (ArrayList<ArrayList<ArrayList<String>>>) bundle.getSerializable(CommonUtils.TIME_TABLE_LIST_TAG);
 
         pagerAdapter = new ViewPagerAdapter(getChildFragmentManager());
-
-        mFragmentActivity = getActivity();
     }
 
     @Override

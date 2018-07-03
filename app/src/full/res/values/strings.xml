@@ -1,5 +1,5 @@
 <resources>
 
-    <string name="title_activity_pdfviewer">PDFViewerActivity</string>
+    <string name="title_activity_pdfviewer" translatable="false">PDFViewerActivity</string>
 
 </resources>
