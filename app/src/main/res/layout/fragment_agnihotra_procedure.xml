@@ -64,35 +64,40 @@
             android:layout_height="wrap_content"
             android:text="@string/lblRequisites1"
             android:textColor="@color/white"
-            android:layout_marginTop="@dimen/dp_10"/>
+            android:layout_marginTop="@dimen/dp_10"
+            android:lineSpacingExtra="@dimen/lineSpacingExtra"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/lblRequisites2"
             android:textColor="@color/white"
-            android:layout_marginTop="@dimen/dp_10"/>
+            android:layout_marginTop="@dimen/dp_10"
+            android:lineSpacingExtra="@dimen/lineSpacingExtra"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/lblRequisites3"
             android:textColor="@color/white"
-            android:layout_marginTop="@dimen/dp_10"/>
+            android:layout_marginTop="@dimen/dp_10"
+            android:lineSpacingExtra="@dimen/lineSpacingExtra"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/lblRequisites4"
             android:textColor="@color/white"
-            android:layout_marginTop="@dimen/dp_10"/>
+            android:layout_marginTop="@dimen/dp_10"
+            android:lineSpacingExtra="@dimen/lineSpacingExtra"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/lblRequisites5"
             android:textColor="@color/white"
-            android:layout_marginTop="@dimen/dp_10"/>
+            android:layout_marginTop="@dimen/dp_10"
+            android:lineSpacingExtra="@dimen/lineSpacingExtra"/>
 
         <!-- How to perform -->
 
@@ -119,7 +124,8 @@
             android:layout_height="wrap_content"
             android:text="@string/lblPerform1"
             android:textColor="@color/white"
-            android:layout_marginTop="@dimen/dp_10"/>
+            android:layout_marginTop="@dimen/dp_10"
+            android:lineSpacingExtra="@dimen/lineSpacingExtra"/>
 
         <ImageView
             android:id="@+id/procedureImage2"
@@ -144,7 +150,8 @@
             android:layout_height="wrap_content"
             android:text="@string/lblPerform2"
             android:textColor="@color/white"
-            android:layout_marginTop="@dimen/dp_10"/>
+            android:layout_marginTop="@dimen/dp_10"
+            android:lineSpacingExtra="@dimen/lineSpacingExtra"/>
 
         <ImageView
             android:id="@+id/procedureImage4"
@@ -160,7 +167,8 @@
             android:layout_height="wrap_content"
             android:text="@string/lblPerform3"
             android:textColor="@color/white"
-            android:layout_marginTop="@dimen/dp_10"/>
+            android:layout_marginTop="@dimen/dp_10"
+            android:lineSpacingExtra="@dimen/lineSpacingExtra"/>
 
         <ImageView
             android:id="@+id/procedureImage5"
@@ -176,7 +184,8 @@
             android:layout_height="wrap_content"
             android:text="@string/lblPerform4"
             android:textColor="@color/white"
-            android:layout_marginTop="@dimen/dp_10"/>
+            android:layout_marginTop="@dimen/dp_10"
+            android:lineSpacingExtra="@dimen/lineSpacingExtra"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -193,7 +202,8 @@
             android:layout_height="wrap_content"
             android:text="@string/lblPerform5"
             android:textColor="@color/white"
-            android:layout_marginTop="@dimen/dp_10"/>
+            android:layout_marginTop="@dimen/dp_10"
+            android:lineSpacingExtra="@dimen/lineSpacingExtra"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -210,7 +220,8 @@
             android:layout_height="wrap_content"
             android:text="@string/lblPerform6"
             android:textColor="@color/white"
-            android:layout_marginTop="@dimen/dp_10"/>
+            android:layout_marginTop="@dimen/dp_10"
+            android:lineSpacingExtra="@dimen/lineSpacingExtra"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -227,7 +238,8 @@
             android:layout_height="wrap_content"
             android:text="@string/lblPerform7"
             android:textColor="@color/white"
-            android:layout_marginTop="@dimen/dp_10"/>
+            android:layout_marginTop="@dimen/dp_10"
+            android:lineSpacingExtra="@dimen/lineSpacingExtra"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -244,7 +256,8 @@
             android:layout_height="wrap_content"
             android:text="@string/lblPerform8"
             android:textColor="@color/white"
-            android:layout_marginTop="@dimen/dp_10"/>
+            android:layout_marginTop="@dimen/dp_10"
+            android:lineSpacingExtra="@dimen/lineSpacingExtra"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -253,7 +266,8 @@
             android:textStyle="bold"
             android:textColor="@color/white_light"
             android:layout_marginTop="@dimen/dp_10"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_gravity="center_horizontal"
+            android:lineSpacingExtra="@dimen/lineSpacingExtra"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -321,7 +335,8 @@
             android:layout_height="wrap_content"
             android:text="@string/lblPerform13"
             android:textColor="@color/white"
-            android:layout_marginTop="@dimen/dp_10"/>
+            android:layout_marginTop="@dimen/dp_10"
+            android:lineSpacingExtra="@dimen/lineSpacingExtra"/>
 
     </LinearLayout>
 

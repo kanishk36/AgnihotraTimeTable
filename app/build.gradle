@@ -24,7 +24,7 @@ android {
     productFlavors {
         maxapi19 {
             versionNameSuffix '-maxapi19'
-            minSdkVersion 9
+            minSdkVersion 14
             dimension "tier"
         }
 

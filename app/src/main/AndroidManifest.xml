@@ -28,11 +28,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".views.SplashActivity"
-            android:theme="@style/AppTheme.Launcher">
+        <activity android:name=".views.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
 
@@ -44,6 +44,7 @@
         <activity
             android:name=".views.MainActivity"
             android:screenOrientation="portrait"
+            android:label="@string/toolbar_title"
             android:windowSoftInputMode="adjustPan|stateHidden">
         </activity>
 

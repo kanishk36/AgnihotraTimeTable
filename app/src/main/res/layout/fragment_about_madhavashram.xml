@@ -26,15 +26,17 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_20"
             android:text="@string/lblAboutMadhavashram"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:lineSpacingExtra="@dimen/lineSpacingExtra"/>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_20"
             android:text="@string/lblShreeSays"
             android:textStyle="bold"
-            android:textColor="@color/white_light"/>
+            android:textColor="@color/white_light"
+            android:gravity="center"/>
 
     </LinearLayout>
 

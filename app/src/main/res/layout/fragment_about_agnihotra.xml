@@ -25,7 +25,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_20"
             android:text="@string/lblAboutAgnihotra"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:lineSpacingExtra="@dimen/lineSpacingExtra"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -40,7 +41,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_20"
             android:text="@string/lblAboutPollution"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:lineSpacingExtra="@dimen/lineSpacingExtra"/>
 
         <View
             android:layout_width="match_parent"
@@ -73,7 +75,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_20"
             android:text="@string/lblAboutSahab"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:lineSpacingExtra="@dimen/lineSpacingExtra"/>
 
     </LinearLayout>
 
