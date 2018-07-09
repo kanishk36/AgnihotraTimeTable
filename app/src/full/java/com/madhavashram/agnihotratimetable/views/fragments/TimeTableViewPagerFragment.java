@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -14,6 +15,7 @@ import android.os.Looper;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.FileProvider;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -38,6 +40,7 @@ import com.madhavashram.agnihotratimetable.views.AbstractActivity;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -147,7 +150,16 @@ public class TimeTableViewPagerFragment extends BaseTimeTableViewPagerFragment {
                 try {
 
                     Intent i = new Intent(Intent.ACTION_VIEW);
-                    i.setDataAndType(Uri.fromFile(pdfFile),"application/pdf");
+                    Uri fileUri;
+                    
+                    if(Build.VERSION.SDK_INT >= 24) {
+                        fileUri = FileProvider.getUriForFile(mFragmentActivity, mFragmentActivity.getPackageName().concat(".provider"), pdfFile);
+                        i.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
+                    } else {
+                        fileUri = Uri.fromFile(pdfFile);
+                    }
+                    i.setDataAndType(fileUri,"application/pdf");
                     startActivity(i);
 
                 } catch (ActivityNotFoundException ex) {
