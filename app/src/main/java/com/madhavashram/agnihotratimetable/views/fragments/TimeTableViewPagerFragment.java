@@ -16,12 +16,9 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.FileProvider;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.itextpdf.text.Document;
@@ -40,7 +37,6 @@ import com.madhavashram.agnihotratimetable.views.AbstractActivity;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -76,13 +72,6 @@ public class TimeTableViewPagerFragment extends BaseTimeTableViewPagerFragment {
         if(city.equals(getString(R.string.city_unknown))) {
             city = getString(R.string.agnihotra);
         }
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
-
     }
 
     @Override
@@ -206,7 +195,7 @@ public class TimeTableViewPagerFragment extends BaseTimeTableViewPagerFragment {
         private void generatePdf() throws Exception {
             Calendar calendar = Calendar.getInstance();
             int year = calendar.get(Calendar.YEAR);
-            String yearStr = "";
+            String yearStr;
             if((year % 4) == 0) {
                 yearStr = "Leap Year";
             } else {
@@ -257,12 +246,12 @@ public class TimeTableViewPagerFragment extends BaseTimeTableViewPagerFragment {
             switch(pageNumber) {
                 case 1:
                     // First 6 months
-                    createTimeTablePage(table, cell, new String[]{"January", "February", "March", "April", "May", "June"}, true);
+                    createTimeTablePage(table, new String[]{"January", "February", "March", "April", "May", "June"}, true);
                     break;
 
                 case 2:
                     // Last 6 months
-                    createTimeTablePage(table, cell, new String[]{"July", "August", "September", "October", "November", "December"}, false);
+                    createTimeTablePage(table, new String[]{"July", "August", "September", "October", "November", "December"}, false);
                     break;
             }
             //absolute location to print the PDF table from
@@ -270,7 +259,7 @@ public class TimeTableViewPagerFragment extends BaseTimeTableViewPagerFragment {
         }
 
         private void createHeadings(PdfContentByte cb, FontStyle fontStyle, float x, float y, float fontSize, String text) throws Exception {
-            String font = "";
+            String font;
             switch(fontStyle) {
                 case NORMAL:
                     font = BaseFont.HELVETICA;
@@ -292,7 +281,7 @@ public class TimeTableViewPagerFragment extends BaseTimeTableViewPagerFragment {
 
     }
 
-    private void createTimeTablePage(PdfPTable table, PdfPCell cell, String[] months, boolean isFirstHalf) {
+    private void createTimeTablePage(PdfPTable table, String[] months, boolean isFirstHalf) {
         int startIndex, endIndex;
         if(isFirstHalf) {
             startIndex = 0;
@@ -304,7 +293,7 @@ public class TimeTableViewPagerFragment extends BaseTimeTableViewPagerFragment {
 
         }
 
-        cell = new PdfPCell(new Phrase(months[0]));
+        PdfPCell cell = new PdfPCell(new Phrase(months[0]));
         cell.setHorizontalAlignment(Element.ALIGN_CENTER);
         cell.setColspan(2);
         table.addCell(cell);
@@ -337,7 +326,7 @@ public class TimeTableViewPagerFragment extends BaseTimeTableViewPagerFragment {
         table.setHeaderRows(2);
 
         for(int col=0; col < 12; col++) {
-            String ampm = "";
+            String ampm;
             if(col % 2 == 0) {
                 ampm = "A.M.";
             } else {

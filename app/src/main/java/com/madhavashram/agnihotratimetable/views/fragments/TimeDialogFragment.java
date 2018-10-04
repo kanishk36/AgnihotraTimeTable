@@ -26,6 +26,7 @@ public class TimeDialogFragment extends BaseDialogFragment {
     private List<String> mDayArray;
     private String mDate;
 
+    @SuppressWarnings("unchecked")
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +44,7 @@ public class TimeDialogFragment extends BaseDialogFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View dialogParentView = inflater.inflate(R.layout.fragment_time_dialog, null);
+        View dialogParentView = inflater.inflate(R.layout.fragment_time_dialog, container, false);
 
         int defaultDialogWidth = (int) getResources().getDimension(R.dimen.dp_309);
 

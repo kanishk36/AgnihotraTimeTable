@@ -10,9 +10,7 @@
     <dimen name="dp_20">20dp</dimen>
     <dimen name="dp_25">25dp</dimen>
     <dimen name="dp_30">30dp</dimen>
-    <dimen name="dp_40">40dp</dimen>
     <dimen name="dp_42">42dp</dimen>
-    <dimen name="dp_44">44dp</dimen>
     <dimen name="dp_50">50dp</dimen>
     <dimen name="dp_120">120dp</dimen>
     <dimen name="dp_309">309dp</dimen>

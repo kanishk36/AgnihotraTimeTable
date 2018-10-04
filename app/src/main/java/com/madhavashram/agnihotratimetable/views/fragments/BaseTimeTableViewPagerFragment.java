@@ -26,7 +26,6 @@ import java.util.Calendar;
 public abstract class BaseTimeTableViewPagerFragment extends Fragment implements ViewPager.OnPageChangeListener {
 
     private PageIndicator mPageIndicator;
-    private ViewPager mViewPager;
     private ViewPagerAdapter pagerAdapter;
 
     private String[] mMonths;
@@ -45,6 +44,7 @@ public abstract class BaseTimeTableViewPagerFragment extends Fragment implements
         mFragmentActivity = getActivity();
     }
 
+    @SuppressWarnings("unchecked")
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,7 +65,7 @@ public abstract class BaseTimeTableViewPagerFragment extends Fragment implements
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_time_table, container, false);
 
-        mViewPager = view.findViewById(R.id.viewPager);
+        ViewPager mViewPager = view.findViewById(R.id.viewPager);
         mPageIndicator = view.findViewById(R.id.pageIndicator);
 
         mViewPager.addOnPageChangeListener(this);

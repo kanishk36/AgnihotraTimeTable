@@ -21,9 +21,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
 import com.madhavashram.agnihotratimetable.R;
 import com.madhavashram.agnihotratimetable.utils.CommonUtils;
 import com.madhavashram.agnihotratimetable.views.fragments.LocationInputFragment;
@@ -49,8 +46,6 @@ public class MainActivity extends AbstractActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        MobileAds.initialize(this, getString(R.string.ad_mob_app_id));
-
         menuArray = getResources().getStringArray(R.array.menu_array);
 
         drawerLayout = findViewById(R.id.drawer_layout);
@@ -61,10 +56,6 @@ public class MainActivity extends AbstractActivity {
         recyclerView.setAdapter(new DrawerMenuAdapter());
 
         setActionBar();
-
-        AdView adView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
 
         pushFragment(false, new LocationInputFragment(), false);
 

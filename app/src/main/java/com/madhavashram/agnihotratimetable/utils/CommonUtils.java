@@ -55,10 +55,7 @@ public class CommonUtils {
         dm = new DisplayMetrics();
         wm.getDefaultDisplay().getMetrics(dm);
 
-        Point point = new Point(dm.widthPixels, dm.heightPixels);
-        dm = null;
-
-        return point;
+        return new Point(dm.widthPixels, dm.heightPixels);
     }
 
     public static void showErrorDialog(Context context, String message) {

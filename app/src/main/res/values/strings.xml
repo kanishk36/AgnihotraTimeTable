@@ -5,6 +5,7 @@
     <string name="drawer_close" translatable="false">Close</string>
     <string name="imgContentDesc" translatable="false">Image Description</string>
     <string name="default_language" translatable="false">en</string>
+    <string name="title_activity_pdfviewer" translatable="false">PDFViewerActivity</string>
 
     <string name="toolbar_title">Agnihotra</string>
     <string name="lblinfo">Shri Madhavji Potdar Saheb \n 1915&#8211;1974 \n Agnihotra widhi ke punarujeevankarta</string>
