@@ -148,7 +148,8 @@
             android:text="@string/lblcopyright"
             android:gravity="center_horizontal"
             android:textColor="@color/white"
-            android:layout_alignParentBottom="true"/>
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_5"/>
 
     </RelativeLayout>
 
